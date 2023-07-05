@@ -1035,7 +1035,7 @@ start_guacamole() {
     fi
 
     # Install webapp
-    ln -sf /opt/guacamole/guacamole.war $CATALINA_BASE/webapps/${WEBAPP_CONTEXT:-guacamole}.war
+    ln -sf /opt/guacamole/egeria.war $CATALINA_BASE/webapps/${WEBAPP_CONTEXT:-egeria}.war
 
     # Start tomcat
     cd /usr/local/tomcat
@@ -1242,7 +1242,7 @@ ln -s /opt/guacamole/ban/guacamole-auth-*.jar "$GUACAMOLE_EXT"
 
 # Set logback level if specified
 if [ -n "$LOGBACK_LEVEL" ]; then
-    unzip -o -j /opt/guacamole/guacamole.war WEB-INF/classes/logback.xml -d $GUACAMOLE_HOME
+    unzip -o -j /opt/guacamole/egeria.war WEB-INF/classes/logback.xml -d $GUACAMOLE_HOME
     sed -i "s/level=\"info\"/level=\"$LOGBACK_LEVEL\"/" $GUACAMOLE_HOME/logback.xml
 fi
 

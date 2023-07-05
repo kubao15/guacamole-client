@@ -64,7 +64,7 @@ mvn $MAVEN_ARGUMENTS package
 # Copy guacamole.war to destination
 #
 
-cp guacamole/target/*.war "$DESTINATION/guacamole.war"
+cp guacamole/target/*.war "$DESTINATION/egeria.war"
 
 #
 # Copy JDBC auth extensions and SQL scripts

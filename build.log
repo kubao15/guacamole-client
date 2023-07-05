@@ -1,0 +1,28 @@
+#1 [internal] load .dockerignore
+#1 transferring context: 112B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 3.25kB 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/maven:3-eclipse-temurin-8-focal
+#3 ...
+
+#4 [internal] load metadata for docker.io/library/tomcat:8.5-jdk8
+#4 DONE 0.9s
+
+#3 [internal] load metadata for docker.io/library/maven:3-eclipse-temurin-8-focal
+#3 ERROR: failed to copy: httpReadSeeker: failed open: unexpected status code https://registry-1.docker.io/v2/library/maven/manifests/sha256:e3fe9afba75892d2406561ac55be239d96ad111a4c00ba9427c272d062f2b46e: 429 Too Many Requests - Server message: toomanyrequests: You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limit
+------
+ > [internal] load metadata for docker.io/library/maven:3-eclipse-temurin-8-focal:
+------
+Dockerfile:31
+--------------------
+  29 |     
+  30 |     # Use official maven image for the build
+  31 | >>> FROM maven:3-eclipse-temurin-8-focal AS builder
+  32 |     
+  33 |     # Use Mozilla's Firefox PPA (newer Ubuntu lacks a "firefox-esr" package and
+--------------------
+ERROR: failed to solve: maven:3-eclipse-temurin-8-focal: failed to copy: httpReadSeeker: failed open: unexpected status code https://registry-1.docker.io/v2/library/maven/manifests/sha256:e3fe9afba75892d2406561ac55be239d96ad111a4c00ba9427c272d062f2b46e: 429 Too Many Requests - Server message: toomanyrequests: You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limit
